@@ -1,8 +1,10 @@
 #include <fstream>
+#include <string>
 
 class Lexer{
 
 public:
+    Lexer(std::string);
     void next();
     char get_val();
 
