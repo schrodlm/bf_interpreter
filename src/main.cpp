@@ -15,4 +15,11 @@ int main(int argc, char** argv)
 
     std::string path = argv[1];
     Lexer l(path);
+    l.parse();
+
+    std::vector<Command> v = l.get_commands();
+    for(int i = 0; i < v.size(); i++)
+    {
+        std::cout <<i << ": " << char(v[i].op) << "(" << v[i].operand << ")" << std::endl; 
+    }
 }
